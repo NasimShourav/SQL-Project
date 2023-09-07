@@ -1,6 +1,3 @@
-select location, date, total_cases, new_cases,total_deaths, population from CovidDeaths
-order by 1,2
-
 -- Looking at total cases vs total deaths
 
 select location, count(location) AS country_appear,total_cases,total_deaths,population from CovidDeaths
