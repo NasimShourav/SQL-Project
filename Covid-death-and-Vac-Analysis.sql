@@ -1,3 +1,6 @@
+select * from CovidVaccinations
+select * from CovidDeaths
+
 -- Looking at total cases vs total deaths
 
 select location, count(location) AS country_appear,total_cases,total_deaths,population from CovidDeaths
@@ -18,14 +21,8 @@ select location, COUNT(location) as loc_appeared, total_cases from CovidDeaths
 where total_cases is null 
 group by location, total_cases
 
-select location, date, total_cases from CovidDeaths where total_cases is NULL and location = 'Bangladesh'
-
-select date, total_deaths from CovidDeaths
-where location = 'Benin' and total_deaths is NULL
-Group BY location, total_deaths
 
 
-select * from CovidVaccinations
 
 -- Looking at total cases vs total deaths (percentage of death)
 
